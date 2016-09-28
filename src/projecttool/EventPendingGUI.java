@@ -6,8 +6,13 @@
 package projecttool;
 
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.geometry.Insets;
+import javafx.scene.Cursor;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -16,6 +21,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
@@ -44,9 +50,12 @@ public class EventPendingGUI extends Application {
         primaryStage.getIcons().add(new Image("/projecttool/NCP.PNG"));
         primaryStage.setTitle("Unit Table");
         
+      
+
+        
         Label label = new Label("Event Pending");
 
-        label.setTextFill(Color.LIGHTSTEELBLUE);
+        label.setTextFill(Color.LIGHTGRAY);
         label.setFont(Font.font("Calibri", FontWeight.BOLD, 16));
         label.setTranslateX(55);
         label.setTranslateY(-10);
@@ -65,12 +74,12 @@ public class EventPendingGUI extends Application {
         TIcon.setTranslateX(2);
         TIcon.setTranslateY(9);
         
-       ImageView Exit = new ImageView("/projecttool/ExitButton.PNG");
+       ImageView Exit = new ImageView("/projecttool/ExitButton2.PNG");
        Exit.getStyleClass().add("ImageView");
-       Exit.setFitHeight(20);
-       Exit.setFitWidth(20);
-       Exit.setTranslateX(570);
-       Exit.setTranslateY(20);
+       Exit.setFitHeight(18);
+       Exit.setFitWidth(18);
+       Exit.setTranslateX(572);
+       Exit.setTranslateY(9);
        Exit.setOnMouseClicked(new EventHandler<MouseEvent>(){
            @Override
            public void handle(MouseEvent t){
@@ -79,12 +88,12 @@ public class EventPendingGUI extends Application {
            
        });
        
-       ImageView Min = new ImageView("/projecttool/minimizeButton.PNG");
+       ImageView Min = new ImageView("/projecttool/minimizeButton1.PNG");
        Min.getStyleClass().add("ImageView");
-       Min.setFitHeight(20);
-       Min.setFitWidth(22);
-       Min.setTranslateX(545);
-       Min.setTranslateY(16);
+       Min.setFitHeight(18);
+       Min.setFitWidth(18);
+       Min.setTranslateX(550);
+       Min.setTranslateY(7);
        
        Min.setOnMouseClicked(new EventHandler<MouseEvent>(){
            @Override
@@ -93,6 +102,7 @@ public class EventPendingGUI extends Application {
            }
            
        });
+
        
         
        // createTable();
@@ -155,10 +165,16 @@ public class EventPendingGUI extends Application {
           } 
            
         }); 
-
-    
+        
+     
+     // Resizer.addResizeListener(primaryStage);
     
     
     }
+}  
+   
+
+      
+   
     
-}
+
