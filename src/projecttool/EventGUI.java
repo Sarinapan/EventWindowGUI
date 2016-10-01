@@ -56,7 +56,7 @@ public class EventGUI extends Application {
         primaryStage.getIcons().add(new Image("/projecttool/NCP.PNG"));
         primaryStage.setTitle("Unit Table");
 
-        Label label = new Label("Event Pending");
+        Label label = new Label("Event");
         label.setTextFill(Color.LIGHTGRAY);
         label.setFont(Font.font("Calibri", FontWeight.BOLD, 16));
         label.setTranslateX(-20);
